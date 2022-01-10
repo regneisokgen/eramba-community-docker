@@ -8,7 +8,7 @@ RUN \
     && yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm \
     && yum -y --enablerepo=remi,remi-php71 install php php-common php-cli php-gd php-intl php-json php-mbstring php-zip php-exif php-ldap php-curl php-mysql php-readline php-xml php-bz2 php-simplexml \
     && wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb \
-    && rpm -Uvh wkhtmltox-0.12.5-1.centos7.x86_64.rpm \
+    && rpm -Uvh wkhtmltox_0.12.6-1.bionic_amd64.deb \
     && yum update -y \
     && yum clean all \
     && rm -vf /etc/httpd/conf.d/autoindex.conf /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/userdir.conf \
