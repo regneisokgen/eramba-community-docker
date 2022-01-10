@@ -6,8 +6,10 @@ chmod 777 -R /var/www/sites/eramba_community/app/tmp
 ### UPDATE THE DB DETAILS IN CONFIG ###
 db_config_file_template="/var/www/sites/eramba_community/app/Config/database.php.default"
 db_config_file="/var/www/sites/eramba_community/app/Config/database.php"
+core_php_file="/var/www/sites/eramba_community/app/Config/core.php"
 cp -f $db_config_file_template $db_config_file
 
+sed "s+// Configure::write('debug', 2);+Configure::write('debug', 2);+g" -i $core_php_file
 sed -i "s#'host' => '',#'host' => '${MYSQL_HOSTNAME}',#g" ${db_config_file}
 sed -i "s#'login' => '',#'login' => '${MYSQL_USER}',#g" ${db_config_file}
 sed -i "s#'password' => '',#'password' => '${MYSQL_PASSWORD}',#g" ${db_config_file}
