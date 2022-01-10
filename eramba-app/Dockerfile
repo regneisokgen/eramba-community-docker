@@ -24,6 +24,7 @@ ADD http://192.168.2.19:2222/latest.tgz /var/www/sites
 # Fix for broken community version which does not have NotificationSystem
 RUN \
     tar -zxvf /var/www/sites/latest.tgz \
+    && ls /var/www/sites/
     && chown -R apache:apache /var/www/sites/eramba_community/
 
 #COPY etc/httpd.conf /etc/httpd/conf/httpd.conf
