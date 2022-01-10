@@ -23,6 +23,7 @@ ADD https://downloadseramba.s3-eu-west-1.amazonaws.com/CommunityTGZ/latest.tgz /
 
 # Fix for broken community version which does not have NotificationSystem
 RUN \
+    tar -czvf /var/www/sites/latest.tgz 
     chown -R apache:apache /var/www/sites/eramba_community
 
 #COPY etc/httpd.conf /etc/httpd/conf/httpd.conf
