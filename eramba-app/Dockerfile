@@ -36,4 +36,3 @@ COPY dbinit.sh /rundb.sh
 EXPOSE 8080
 
 CMD ["/run.sh"]
-CMD ["/rundb.sh"]
