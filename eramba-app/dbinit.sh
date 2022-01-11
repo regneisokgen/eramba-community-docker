@@ -2,7 +2,6 @@
 
 # set -x
 
-ERAMBADBCONF=/app/app/Config/database.php
 MAXTRIES=20
 
 wait4mysql () {
