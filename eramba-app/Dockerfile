@@ -31,7 +31,6 @@ COPY etc/php.ini  /etc/php.ini
 COPY etc/25-eramba.conf  /etc/httpd/conf.d/
 
 COPY httpd_run.sh /run.sh
-COPY dbinit.sh /rundb.sh
 
 EXPOSE 8080
 
