@@ -18,6 +18,8 @@ sed -i "s#'prefix' => '',#'prefix' => '${DATABASE_PREFIX}',#g" ${db_config_file}
 #######################################
 
 sed -i "s/Listen 80$/Listen 8080/g" /etc/httpd/conf/httpd.conf
+sed -i 's/#ServerName www.example.com:80/ServerName localhost/g' /etc/httpd/conf/httpd.conf
+
 
 ### STARTING APACHE ###
 rm -vf /var/run/httpd/httpd.pid
