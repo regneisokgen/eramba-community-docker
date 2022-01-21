@@ -31,7 +31,9 @@ COPY etc/php.ini  /etc/php.ini
 COPY etc/25-eramba.conf  /etc/httpd/conf.d/
 
 COPY httpd_run.sh /run.sh
+COPY deploy_cron_services.sh /deploy_cron_all.sh
 
 EXPOSE 8080
 
 CMD ["/run.sh"]
+CMD ["/deploy_cron_all.sh"]
